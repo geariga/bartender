@@ -5,7 +5,7 @@ import axios from 'axios'
 export default function DrinkSelect(props) {
     const [allDrinks, setAllDrinks] = useState([])
     useEffect(() => {
-        axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/popular.php')
+        axios.get('https://www.thecocktaildb.com/api/json/v2/HIDDEN/popular.php')
             .then(response => { 
                 setAllDrinks(() => {
                     return response.data.drinks.sort((a, b) => {
