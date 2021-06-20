@@ -1,0 +1,13 @@
+@import '../../styles/index.scss';
+
+.drink-info-section {
+    width: 100%;
+    height: fit-content;
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+}
+
+.drink-info-section ul li {
+    margin: 4px 0px 12px 0px
+}

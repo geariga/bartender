@@ -1,0 +1,13 @@
+@import '../../styles/index.scss';
+@import '../../styles/mixins.scss';
+
+.drink-info {
+    @include flex(column, flex-start, center, nowrap);
+    width: 50%;
+    height: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background-color: $cream;
+    color: black;
+    overflow-y: scroll;
+}

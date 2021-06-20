@@ -1,0 +1,69 @@
+@import './mixins.scss';
+
+$darkBrown: #491800;
+$goldenBrown: #836008;
+$peach: #FFE1A6;
+$cream: #FFFAED;
+$asparagus: #8CAD75;
+
+$theme-colors: (
+    "darkbrown": $darkBrown,
+    "peach": $peach,
+    "goldenBrown": $goldenBrown,
+    "cream": $cream,
+    "asparagus": $asparagus
+);
+
+@import 'bootstrap/scss/bootstrap';
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $goldenBrown;
+}
+
+#app {
+    height: 100%;
+}
+
+main {
+    height: calc(100% - 50px);
+}
+
+.column {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 36px 12px;
+}
+
+main > .column:first-of-type {
+    @include flex(column, flex-start, center, nowrap);
+    background-image: url('https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=650');
+    background-size: cover;
+}
+
+main > .column:last-of-type {
+    text-align: center;
+    background-image: url('https://images.pexels.com/photos/7916108/pexels-photo-7916108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=650');
+    background-size: cover;
+}
+
+main > .column:last-of-type img {
+    width: auto;
+    height: 100%;
+}
