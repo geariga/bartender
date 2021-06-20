@@ -10,7 +10,7 @@ export default function App() {
     const [currentDrink, setCurrentDrink] = useState(null)
 
     const getDrinkInfo = ( e ) => {
-        axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${e.target.value}`)
+        axios.get(`https://www.thecocktaildb.com/api/json/v2/HIDDEN/lookup.php?i=${e.target.value}`)
             .then(response => setCurrentDrink(() => response.data.drinks[0]))
     }
 
